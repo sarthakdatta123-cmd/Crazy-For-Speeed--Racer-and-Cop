@@ -1,0 +1,15 @@
+{
+  "name": "crazy-for-speed-racer-and-cop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}

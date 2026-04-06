@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy For Speed: Racer and Cop</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <div class="hud-frame">
+      <div class="title-block">
+        <p class="eyebrow">Original arcade pursuit prototype</p>
+        <h1>Crazy For Speed</h1>
+        <p class="subtitle">Outrun traffic, survive the task force, and keep your heat from boiling over.</p>
+        <div class="profile-strip" id="profileStrip"></div>
+      </div>
+
+      <div class="viewport">
+        <canvas id="game" width="1280" height="720" aria-label="Crazy For Speed game area"></canvas>
+
+        <div class="overlay overlay-visible" id="menu">
+          <div class="panel">
+            <p class="panel-kicker">Racer vs cop pursuit</p>
+            <h2>Break the chase</h2>
+            <p>
+              Use <strong>WASD</strong> or <strong>Arrow Keys</strong> to drive. Hold <strong>Shift</strong> for nitro.
+              Tap <strong>Q</strong>, <strong>E</strong>, and <strong>R</strong> for your selected pursuit tech.
+              Thread traffic for score, avoid heavy impacts, and stay ahead of the police net.
+            </p>
+            <div class="garage" id="modes"></div>
+            <div class="garage" id="garage"></div>
+            <div class="garage" id="destinations"></div>
+            <div class="garage" id="techLoadout"></div>
+            <div class="garage upgrades" id="upgrades"></div>
+            <p class="shop-feedback" id="shopFeedback"></p>
+            <div class="panel-actions">
+              <button id="startButton" type="button">Start Run</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="route-ui" id="routeChoice"></div>
+
+        <div class="overlay" id="gameOver">
+          <div class="panel">
+            <p class="panel-kicker">Pursuit collapsed</p>
+            <h2 id="gameOverTitle">Busted</h2>
+            <p id="summaryText">You pushed too hard and lost the run.</p>
+            <p id="rewardText">Rep 0 | Cash 0</p>
+            <button id="restartButton" type="button">Run It Back</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="swatch speed"></i> Speed and score scale together</span>
+        <span><i class="swatch heat"></i> Heat summons more police units</span>
+        <span><i class="swatch boost"></i> Nitro burns fast, recharge by staying clean</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
